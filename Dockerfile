@@ -34,7 +34,7 @@ ENV HOME /home/buildagent
 ENV GRADLE_USER_HOME $HOME/.gradle
 ENV ANDROID_HOME $HOME/android-sdk-linux
 ENV ANDROID_SDK_ROOT $HOME/.android
-ENV GRADLE_HOME /usr/bin/gradle
+ENV GRADLE_HOME /usr/bin/
 ENV SHELL /bin/bash
 ENV PATH "$ANDROID_HOME/emulator:$PATH"
 ENV PATH "$ANDROID_HOME/platform-tools:$PATH"
