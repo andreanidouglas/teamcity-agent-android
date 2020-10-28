@@ -59,3 +59,8 @@ RUN yes| $ANDROID_HOME/cmdline-tools/bin/sdkmanager  --licenses --sdk_root="$AND
 RUN $ANDROID_HOME/cmdline-tools/bin/sdkmanager  --update --sdk_root="$ANDROID_SDK_ROOT"
 RUN $ANDROID_HOME/cmdline-tools/bin/sdkmanager  "platforms;android-29" "platforms;android-30" "build-tools;30.0.2" "extras;google;m2repository" "extras;android;m2repository" --sdk_root="$ANDROID_SDK_ROOT"
 
+
+# Start teamcity agent
+CMD ["/run-services.sh"]
+
+
