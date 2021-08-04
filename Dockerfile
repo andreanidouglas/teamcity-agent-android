@@ -20,7 +20,7 @@ RUN set -x && \
 	apt-get update && \
 	apt-get install build-essential -y && \
 	apt-get install flex bison bc dc wget curl git unzip file -y && \
-    apt-get install libc6-dev-i386 lib32z1 openjdk-8-jdk -y
+    apt-get install libc6-dev-i386 lib32z1 openjdk-11-jdk -y
 
 
 USER buildagent
@@ -31,6 +31,7 @@ ENV GRADLE_USER_HOME $HOME/.gradle
 ENV ANDROID_HOME $HOME/.android
 ENV ANDROID_CMD_ROOT $HOME/android_cmd
 ENV GRADLE_HOME $HOME/.gradle
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
 ENV SHELL /bin/bash
 ENV PATH "ANDROID_HOME/emulator:$PATH"
 ENV PATH "ANDROID_HOME/platform-tools:$PATH"
